@@ -40,10 +40,19 @@ After training, evaluate each classifier (GloVe, Gemini, SBERT, OpenAI Ada) on a
 | OpenAI Ada | 0.90     | 0.89      | 0.90   | 0.89     |
 
 
+## Recommendations
 
-### Recommendations
-- **Best Performing Model:** Based on the above metrics, select the model with the highest F1-score or best trade-off for your use case.
-- **Analysis:** Discuss why certain embeddings performed better (e.g., OpenAI Ada may outperform GloVe due to richer context understanding).
-- **Suggestions:** If class imbalance is present, using `class_weight='balanced'` (as done for OpenAI Ada) can improve results.
+- **Use Real Embeddings:** For best results, always use real pre-trained embeddings (e.g., GloVe, OpenAI Ada) rather than random vectors.
+- **Model Selection:** Choose the embedding model with the highest F1-score for your use case. In most cases, transformer-based embeddings (OpenAI Ada, Gemini/SBERT) outperform GloVe on news classification tasks.
+- **Class Imbalance:** If your dataset is imbalanced, use `class_weight='balanced'` in your classifier (as done for OpenAI Ada) to improve minority class performance.
+- **API Keys:** Store all API keys (Gemini, OpenAI) in your `.env` file and never commit them to version control.
+- **Frontend/Backend Security:** Restrict CORS origins in production to only allow your frontend domain.
+- **Scalability:** For larger datasets, consider using batch processing for embedding extraction and model training.
+- **Visualization:** Use embedding cluster visualizations (e.g., UMAP/t-SNE) to gain insights into how articles are grouped by topic.
+- **Continuous Evaluation:** Regularly evaluate your models on new data and retrain as needed to maintain accuracy.
+- **Deployment:** Use Docker or cloud services for scalable deployment of both backend and frontend.
+- **Documentation:** Keep your README and code comments up to date for easier collaboration and maintenance.
+
+ 
 
  
