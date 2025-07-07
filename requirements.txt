@@ -1,0 +1,11 @@
+fastapi
+scikit-learn
+numpy
+pandas
+requests
+python-dotenv
+uvicorn
+matplotlib
+plotly
+umap-learn
+tqdm 

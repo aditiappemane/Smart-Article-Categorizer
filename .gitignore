@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.db
+*.sqlite3
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.env.*
+
+# Data
+/data/*.csv
+/data/*.txt
+/data/*.zip
+/data/*.pkl
+
+# Node
+node_modules/
+frontend/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+/build/
+/dist/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# React
+frontend/build/ 
